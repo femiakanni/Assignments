@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design with flex box</title>
+    <style>
+        body{
+  background-color: blue;
+  color:aliceblue;
+  }
+  @media screen and (max-width:992px) {
+      body{
+          background-color: yellow;
+          color:aliceblue;
+          }
+  }
+  @media screen and (max-width:600px) and (min-width:400px){
+      body{
+          background-color: red;
+          color:aliceblue;
+          }
+  }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, [col] 1fr);
+    grid-template-rows: repeat(4, [row] 1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 15px;
+    grid: 900px;
+    padding: 20px;
+    border-radius: 15px;
+    border-width: 20px;
+  }
+  /* .grid__item {
+    background: #eee;
+    text-transform: uppercase;
+    padding: 1em;
+    font-size: 14px;
+  } */
+    
+  .grid__item_item-v1 {
+    background-color: orangered;
+    grid-column: col / span 3;
+    grid-row: row  / span 2;
+    height: 200px;
+  }
+  
+  .grid__item_item-v2 {
+    background-color: yellow;
+    grid-column: col 4 / span 2;
+    grid-row: row / span 2;
+  }
+  
+  .grid__item_item-v3 {
+    background-color: mediumseagreen;
+    grid-column: col  / span 2;
+    grid-row: row 3 /span 2;
+  }
+  
+  .grid__item_item-v4 {
+    background-color: cornflowerblue;
+    grid-column: col 3 / span 3;
+    grid-row: row 3;
+  }
+  
+  .grid__item_item-v5 {
+    background-color: cornflowerblue;
+    grid-column: col 3 / span 3;
+    grid-row: row 4;
+  
+  }
+  body{
+    align-items: center;
+    margin: 70px;
+    width:600px;
+    height: 100px;
+  }
+  .container{
+
+    background-color: black;
+    border-width: 100px;
+    border-radius: 15px;
+
+  }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="grid"> 
+        <div class="grid__item grid__item_item-v1"></div>
+        <div class="grid__item grid__item_item-v2"></div>
+        <div class="grid__item grid__item_item-v3"></div>
+        <div class="grid__item grid__item_item-v4"></div>
+        <div class="grid__item grid__item_item-v5"></div>
+    </div>
+</div>
+</body>
+</html>
